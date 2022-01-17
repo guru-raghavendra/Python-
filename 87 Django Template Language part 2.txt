@@ -8,11 +8,11 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'home.html', {'name': 'Kiran'})
+    return render(request, 'home.html', {'name': 'Kiran'})            ####changed line
 
 
 --------------------------------------------------------------------------------
-                              home.html
+                              home.html         ####extendig base.html, i.e in base.html its going to substitute the block content
 --------------------------------------------------------------------------------
 
 {% extends 'base.html' %}
@@ -39,7 +39,7 @@ def home(request):
 
 <body bgcolor="cyan">
 
-    {% block content %}
+    {% block content %}     ####changed line
 
     {% endblock %}
 
