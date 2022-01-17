@@ -1,4 +1,21 @@
                               index.html
+			      
+#in this all 3 destions are sent as a single list
+#used {% for dest in destions %}
+      {% endfor %} in the html
+
+
+#{{dest.name}} for dest name display
+
+#img src="{{baseUrl}}/{{dest.img}}" alt=""> 
+	because initially it was <img src="{% static 'images/destination_1.jpg' %}" alt="">
+	if distination_1.jpg in above is replaced with {{dest.img}}
+	
+	jinga go inside a jinga which is not possibel.
+
+so {% static "images" as baseUrl %} in the top of the file so that we can remove the overlap
+	and it becomes 	{{baseUrl}}/{{dest.img}}
+	
 --------------------------------------------------------------------------------
 
 {% load static %}
