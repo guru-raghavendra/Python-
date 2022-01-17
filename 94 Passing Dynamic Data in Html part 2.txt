@@ -1,8 +1,9 @@
                               index.html
 			      
-#in this all 3 destions are sent as a single list
+#in this all 3 destions are sent as a single list of objects in the views.py
+
 #used {% for dest in destions %}
-      {% endfor %} in the html
+      {% endfor %} in the html, for loop iteration in html
 
 
 #{{dest.name}} for dest name display
