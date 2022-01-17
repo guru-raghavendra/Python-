@@ -1,7 +1,7 @@
                               index.html
 --------------------------------------------------------------------------------
 
-{% load static %}
+{% load static %}	#changes done here, to load static files n use static word
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +11,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Travello template project">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}"> 	#####{%static ... } added here to specify the loaction of 															static file in django style
+	
 	<link href="{%static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
 	<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
@@ -792,10 +793,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
+
+STATICFILES_DIRS = [				#specified to know where the static is stored
     os.path.join(BASE_DIR, 'static')
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')	#copy it to django root
 
 --------------------------------------------------------------------------------
                                  urls.py :: travello
@@ -859,4 +861,4 @@ urlpatterns = [
 
 >workon test
 >python manage.py startapp travello
->python manage.py collectstatic
+>python manage.py collectstatic		#for creating the assets(for static folder of django) forder specified in settings.py
