@@ -1,4 +1,7 @@
                               index.html
+		
+## in line 280 {{dest1.name}} is used in place of destion name for dynamic purpose,
+	dest1 is object of type destions() class created in models.py and send the data throungh views
 --------------------------------------------------------------------------------
 
 {% load static %}
@@ -628,7 +631,7 @@
 
 
 --------------------------------------------------------------------------------
-                               models.py
+                               models.py    ##creating class destination
 --------------------------------------------------------------------------------
 
 from django.db import models
@@ -806,7 +809,7 @@ def index(request):
     dest1.desc = 'The City That Never Sleeps'
     dest1.price = 700
 
-    return render(request, "index.html", {'dest1': dest1})
+    return render(request, "index.html", {'dest1': dest1}) 		#made changes here to send dynamic content
 
 
 --------------------------------------------------------------------------------
