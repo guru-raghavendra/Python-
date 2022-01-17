@@ -13,7 +13,7 @@ def home(request):
 
 def add(request):
 
-    val1 = int(request.POST['num1'])
+    val1 = int(request.POST['num1'])    ####changed to post from get
     val2 = int(request.POST['num2'])
     res = val1 + val2
 
@@ -29,9 +29,9 @@ def add(request):
 {% block content %}
 <h1>Hello {{name}}!!!!!</h1>
 
-<form action="add" method="POST">
+<form action="add" method="POST">       ####changed line
 
-    {% csrf_token %}
+    {% csrf_token %}                    ####added line for csrf
 
     Enter 1st number : <input type="text" name="num1"><br>
     Enter 2st number : <input type="text" name="num2"><br>
