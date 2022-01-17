@@ -1,4 +1,13 @@
-                              index.html
+ #added if in codintion so that special offer is only for a perticular place not all
+ # so created a new member of class 'offer'
+ in views, 
+ 	specify dest1.offer=True / False
+
+in index.html, for 'if'
+{% if dest.offer %} ##line 300
+{% endif %}
+ 
+ 					index.html
 --------------------------------------------------------------------------------
 {% load static %}
 {% static "images" as baseUrl %}
