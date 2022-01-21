@@ -1,4 +1,30 @@
-                              index.html
+ -------------------                         How to create SuperUser steps:      ----------------------------------------------
+
+>python manage.py help
+>python manage.py createsuperuser
+Username: kiran
+Email address : connect@telusko.com
+Password: 1234
+Password (again): 1234
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+
+in admins.py file
+----
+from .models import Destination
+
+# Register your models here.
+
+admin.site.register(Destination)
+---
+
+
+
+
+
+
+ 				index.html
 --------------------------------------------------------------------------------
 {% load static %}
 {% static "images" as baseUrl %}
@@ -797,7 +823,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 --------------------------------------------------------------------------------                           admin.py
 --------------------------------------------------------------------------------
 
-from django.contrib import admin
+from django.contrib import admin					###changes done here##
 from .models import Destination
 
 # Register your models here.
