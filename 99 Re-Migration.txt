@@ -1,4 +1,5 @@
-                              index.html
+###steps at the end of the file
+			index.html
 --------------------------------------------------------------------------------
 {% load static %}
 {% static "images" as baseUrl %}
