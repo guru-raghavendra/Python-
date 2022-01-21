@@ -42,7 +42,8 @@ change models.py
 		    offer = models.BooleanField(default=False)
 		    
 		    #search for django model fields we find the the database types used in django
-	   
+	
+###commands for migration are at the end of page
 
 
 
